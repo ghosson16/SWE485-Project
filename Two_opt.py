@@ -2,7 +2,7 @@ import itertools
 import numpy as np
 import random
 
-class Solver:
+class Two_opt:
     def __init__(self, distance_matrix, initial_route=None):
         """Initialize the Solver class with a distance matrix and an optional initial route."""
         self.distance_matrix = distance_matrix
@@ -75,7 +75,7 @@ distance_matrix = [
 
 cities = ['LA', 'NYC', 'Chicago', 'Las Vegas', 'Seattle']
 
-solver = Solver(distance_matrix)
+solver = Two_opt(distance_matrix)
 best_route, best_distance, distances = solver.two_opt()
 
 # Convert best route to city names
